@@ -2,57 +2,49 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Link from "next/link";
 
+import styles from "../styles/home.module.css";
+
 const inter = Inter({ subsets: ['latin'] });
 
-import IMG from "../../public/png-clipart-internet-access-voice-over-ip-telecommunication-circuit-technology-computer-network-electronics.png"
+const Arrow = <svg  className={styles.arrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
 
 export default function Home() {
   return (
-      <>
-        <header className="h-12 p-2 w-full mx-auto bg-white  shadow-lg flex items-end justify-end space-x-10">
-          <img alt="img" src="https://oniomania.ru/attachments/Image/i_23.jpg?template=generic" width={70} height={20}/>
-          <Link className="text-2xl font-bold" href="/" class="font-bold text-4xl">МосОблТелеком</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">О компании</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Услуги и цены</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Как оплатить</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Клиенту сети</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Контакты</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Новости</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Форум</Link>
-          <Link className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400" href="/">Зона охвата</Link>
+      <div className={styles._}>
+        <header className={styles.header}>
+          <Link className={styles.logo} href="/">МосОблТелеком</Link>
+          <Link className={styles.headerLinks} href="/">О компании</Link>
+          <Link className={styles.headerLinks} href="/">Услуги и цены</Link>
+          <Link className={styles.headerLinks} href="/">Как оплатить</Link>
+          <Link className={styles.headerLinks} href="/">Клиенту сети</Link>
+          <Link className={styles.headerLinks} href="/">Контакты</Link>
+          <Link className={styles.headerLinks} href="/">Новости</Link>
+          <Link className={styles.headerLinks} href="/">Зона охвата</Link>
         </header>
-        <main
-            className={`flex min-h-screen gap-x-16 flex-col items-center justify-center bg-cover ${inter.className}`}
-            style={{backgroundImage: "url('https://oniomania.ru/attachments/Image/i_23.jpg?template=generic')"}}
-        >
-          <section class="w-full h-screen grid grid-cols-3 gap-16">
+        <main className={styles.main}>
+          {/*<section class="w-full h-screen grid grid-cols-3 gap-16">*/}
 
-            {/*<Image alt="img" src={IMG} className="bg-red-500"/>*/}
-
-            <div
-                class="h-full flex justify-center items-center"
-            >
-              <form className="flex flex-col gap-3 items-center">
-                <span>Проверить адрес:</span>
-                <span className="flex flex-col w-44">
-                          <label>Город: </label>
-                          <input className="border-2 border-blue-400"/>
-                      </span>
-                <span className="flex flex-col w-44">
-                          <label>Улица: </label>
-                          <input className="border-2 border-blue-400"/>
-                      </span>
-                <div className="flex gap-3 items-end">
-                          <span className="flex flex-col w-20">
-                              <label>Дом:</label><input className="border-2 border-blue-400"/>
-                          </span>
-                  <span className="flex flex-col w-20">
-                              <label>Корпус:</label><input className="border-2 border-blue-400"/>
-                          </span>
-                </div>
-                <button type="submit" className="w-28 border-2 border-blue-400 bg-yellow-500">Проверить</button>
-              </form>
+          <form className={styles.leftCol}>
+            <span>Проверить адрес:</span>
+            <span className={styles.inputWrap}>
+                  <label>Город: </label>
+                  <input className={styles.input}/>
+            </span>
+            <span className={styles.inputWrap}>
+                  <label>Улица: </label>
+                  <input className={styles.input}/>
+            </span>
+            <div className={styles.wrap}>
+              <span>
+                  <label>Дом:</label><input className={styles.input}/>
+              </span>
+              <span>
+                  <label>Корпус:</label><input className={styles.input}/>
+              </span>
             </div>
+            <button type="submit" className={styles.searchButton}>Проверить</button>
+          </form>
 
 
             <div class="col-span-2 grid grid-cols-3 m-2">
@@ -73,20 +65,12 @@ export default function Home() {
                 </div>
                 <div
                     className="h-1/4 w-full text-4xl font-sans text-center text-yellow-500 font-bold "
-                    style={{textShadow: "#000 1px 0 5px"}}
+                    style={{textShadow: "#000 1px 0 5px", margin: "1rem"}}
                 >
                   Наши клиенты самые довольные!!!
                 </div>
-                <div>
-                  <form className="flex flex-col items-end w-2/3 gap-5 h-48">
-                    <span>Вход в личный кабинет:</span>
-                    <label>Логин:  <input className="border-2 border-blue-400"/></label>
-                    <label>Пароль:  <input className="border-2 border-blue-400"/></label>
-                    <div className="space-x-10">
-                      <button className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400">Вход</button>
-                      <button className="underline underline-offset-4 decoration-sky-600 hover:decoration-blue-400">Регистрация</button>
-                    </div>
-                  </form>
+                <div className={styles.lk}>
+                  <a href="http://lk.mosobl-telecom.ru/" target="_blank"><div>{Arrow}</div>Личный кабинет</a>
                 </div>
               </div>
 
@@ -108,7 +92,7 @@ export default function Home() {
                   в каждый
                 </div>
                 <div
-                    className="text-9xl font-bold text-center text-yellow-400"
+                    className="text-6xl font-bold text-center text-yellow-400"
                     style={{textShadow: "#000 1px 0 5px"}}
                 >
                   дом
@@ -121,7 +105,7 @@ export default function Home() {
               <p className="bg-yellow-400 text-2xl font-bold text-center opacity-90 rounded-se-2xl">Новости:</p>
               <div className="bg-white opacity-70 rounded-ee-2xl space-y-4 p-4 ">
                 <p>
-                  {`${(new Date()).getDate()}.${(new Date()).getMonth()}.${(new Date()).getFullYear()}`}
+                  {`${(new Date()).getDate()}.${(new Date()).getMonth()+1}.${(new Date()).getFullYear()}`}
                 </p>
                 <p className="font-bold">Здесь будут новости компании</p>
                 <p>
@@ -167,8 +151,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </section>
+          {/*</section>*/}
         </main>
-      </>
+      </div>
   )
 }
