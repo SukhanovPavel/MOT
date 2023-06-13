@@ -1,0 +1,19 @@
+.title {
+    background: var(--yellow-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.9;
+    border-top-right-radius: 1rem;
+}
+.news {
+    background: white;
+    opacity: 0.7;
+    padding: 1rem;
+}
+.news p {
+    margin-top: 0.5rem;
+}
+.bold {
+    font-weight: bold;
+}
