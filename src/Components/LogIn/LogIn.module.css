@@ -74,7 +74,6 @@
     font-size: 2rem;
     font-weight: bold;
     color: var(--red-color);
-    text-shadow: #000 1px 0 5px;
 }
 .contact {
     display: flex;
