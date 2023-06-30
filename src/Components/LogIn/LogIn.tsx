@@ -1,4 +1,5 @@
 import styles from "./LogIn.module.css";
+import Link from "next/link";
 
 
 const Arrow = <svg  className={styles.arrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -11,10 +12,10 @@ export const LogIn = () => (
         <div className={styles.login}>
             <div className={styles.loginTop}>
                 <div className={styles.topHeaders+" "+styles.left}>
-                    Частным клиентам:
+                    <Link href="/for-clients">Частным клиентам:</Link>
                 </div>
                 <div className={styles.topHeaders+" "+styles.right}>
-                    Корпоративным клиентам:
+                    <Link href="/for-clients">Корпоративным клиентам:</Link>
                 </div>
             </div>
             <div className={styles.slogan}>

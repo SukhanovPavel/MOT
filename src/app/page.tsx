@@ -6,6 +6,9 @@ import {About} from "@/Components/About/About";
 
 import styles from "../styles/home.module.css";
 import {PageLayout} from "@/shared/PageLayout/PageLayout";
+import {ContactMap} from "@/Components/ContactMap/ContactMap";
+import React from "react";
+import {Contacts} from "@/Components/Contacts/Contacts";
 
 export default function Home() {
   return (
@@ -18,6 +21,10 @@ export default function Home() {
           <News />
 
           <About />
+
+          <Contacts />
+
+          <ContactMap />
 
       </PageLayout>
   )

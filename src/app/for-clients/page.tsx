@@ -17,11 +17,11 @@ export default function ForClients()  {
                 </div>
 
                 <div className={styles.grid}>
-                    <div className={styles.lk}>Тариф частным клиентам</div>
+                    <div className={styles.lk}>Шатура: 400р/месяц до 100Мбит</div>
                     <div className={styles.lk}>Тариф корпоративным клиентам</div>
-                    <div className={styles.lk}>Тариф частным клиентам</div>
+                    <div className={styles.lk}>Шатурский район: 620р/месяц до 100Мбит</div>
                     <div className={styles.lk}>Тариф корпоративным клиентам</div>
-                    <div className={styles.lk}>Тариф частным клиентам</div>
+                    <div className={styles.lk}>Частный сектор: 1000р/месяц до 30Мбит</div>
                     <div className={styles.lk}>Тариф корпоративным клиентам</div>
                 </div>
 

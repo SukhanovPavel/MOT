@@ -1,6 +1,8 @@
 ._ {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    animation-duration: 0.5s;
+    animation-name: slidein;
 }
 .arrow {
     height: 6rem;
@@ -92,4 +94,16 @@
     text-align: center;
     color: var(--yellow-color);
     text-shadow: #000 1px 0 5px;
+}
+
+@keyframes slidein {
+    from {
+        margin-right: -30rem;
+        /*width: 60%;*/
+    }
+
+    to {
+        margin-right: 0;
+        /*width: 100%;*/
+    }
 }

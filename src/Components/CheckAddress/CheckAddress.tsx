@@ -50,7 +50,12 @@ export const CheckAddress = () => {
             {/*      <label>Корпус:</label><input className={styles.input}/>*/}
             {/*  </span>*/}
             {/*</div>*/}
-            <button type="submit" className={styles.searchButton}>Проверить</button>
+            <button
+                className={styles.searchButton}
+                onClick={(event) => {event.preventDefault()}}
+            >
+                Проверить
+            </button>
         </form>
     )
 }

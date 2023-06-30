@@ -1,0 +1,29 @@
+.contacts {
+    font-size: 1.2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: flex-end;*/
+    text-align: center;
+    /*background: rgb(150, 150, 150, 0.3);*/
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.contacts h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--red-color);
+    text-shadow: #000 1px 0 1px;
+}
+
+.contacts p {
+    margin-top: 2rem;
+    color: var(--red-color);
+}
+
+.contacts a {
+    color: var(--blue-color);
+    text-shadow: #000 1px 0 1px;
+}
