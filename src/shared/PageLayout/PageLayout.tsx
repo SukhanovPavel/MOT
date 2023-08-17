@@ -4,7 +4,7 @@ import {Header} from "@/Components/Header/Header";
 import styles from "./PageLayout.module.css";
 
 
-export const PageLayout = ({children}: React.ReactNode) => (
+export const PageLayout = ({children}: React.ReactNode | Element[]) => (
     <div className={styles._}>
 
         <Header />
