@@ -3,3 +3,12 @@
     height: 65vh;
     margin: 3rem auto;
 }
+
+@media screen and (max-width: 980px){
+    .map {
+        padding: 1rem;
+        width: 100%;
+        height: 45vh;
+        margin: 0;
+    }
+}

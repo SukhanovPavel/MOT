@@ -107,3 +107,32 @@
         /*width: 100%;*/
     }
 }
+
+@media screen and (max-width: 980px) {
+    ._ {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        animation: none;
+        gap: 2rem;
+    }
+    .login {
+        /*background: white;*/
+        background: rgb(150, 150, 150, 0.3);
+        padding: 0 1rem;
+    }
+    .loginTop {
+        display: none;
+    }
+    .topHeaders {
+        display: none;
+    }
+    .lk {
+        background: whitesmoke;
+        width: 90%;
+        margin: 1rem;
+        height: auto;
+        border-radius: 3rem;
+        padding-right: 1rem;
+    }
+}

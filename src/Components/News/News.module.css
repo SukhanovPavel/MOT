@@ -17,3 +17,9 @@
 .bold {
     font-weight: bold;
 }
+
+@media screen and (max-width: 980px){
+    ._ {
+        padding-right: 1rem;
+    }
+}

@@ -1,7 +1,7 @@
 import styles from "./About.module.css";
 
 export const About = () => (
-    <div>
+    <div className={styles._}>
         <p className={styles.title}>
             Добро пожаловать!
         </p>

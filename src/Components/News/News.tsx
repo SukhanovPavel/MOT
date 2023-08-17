@@ -1,7 +1,7 @@
 import styles from "./News.module.css";
 
 export const News = () => (
-    <div>
+    <div className={styles._}>
         <p className={styles.title}>Новости:</p>
         <div className={styles.news}>
             <p>
