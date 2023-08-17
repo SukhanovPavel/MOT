@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function ForClients()  {
     return (
         <PageLayout>
-            <div className={styles.title}>Страница клиента >></div>
+            <div className={styles.title}>Страница клиента &gt;</div>
             <div className={styles.login}>
 
                 <div className={styles.loginTop}>
