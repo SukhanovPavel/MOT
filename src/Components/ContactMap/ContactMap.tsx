@@ -8,7 +8,7 @@ import styles from "./ContactMap.module.css";
 
 type Props = {
     center: number[];
-    defaultPlacemark: {center: number[]};
+    defaultPlacemark: boolean;
     placemarks: {center: number[]}[];
     zoom: number;
 }
