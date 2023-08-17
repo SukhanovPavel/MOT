@@ -2,10 +2,14 @@
 
 import React from 'react';
 import {Clusterer, Map, Placemark, YMaps} from "@pbe/react-yandex-maps";
+import type { LngLat } from "@yandex/ymaps3-types";
 
 import styles from "./ContactMap.module.css";
 
-export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}) => {
+type Props = {
+    center: LngLat;
+}
+export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}: Props) => {
     return (
         <YMaps>
             <Map
