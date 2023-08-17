@@ -30,26 +30,6 @@ export const CheckAddress = () => {
               </div>}
 
             </span>
-
-
-
-
-
-
-
-
-            {/*<span className={styles.inputWrap}>*/}
-            {/*      <label>Улица: </label>*/}
-            {/*      <input className={styles.input}/>*/}
-            {/*</span>*/}
-            {/*<div className={styles.wrap}>*/}
-            {/*  <span>*/}
-            {/*      <label>Дом:</label><input className={styles.input}/>*/}
-            {/*  </span>*/}
-            {/*    <span>*/}
-            {/*      <label>Корпус:</label><input className={styles.input}/>*/}
-            {/*  </span>*/}
-            {/*</div>*/}
             <button
                 className={styles.searchButton}
                 onClick={(event) => {event.preventDefault()}}
