@@ -8,6 +8,9 @@ import styles from "./ContactMap.module.css";
 
 type Props = {
     center: LngLat;
+    defaultPlacemark: LngLat;
+    placemarks: LngLat;
+    zoom: number;
 }
 export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}: Props) => {
     return (
