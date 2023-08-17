@@ -7,7 +7,7 @@ import type { LngLat } from "@yandex/ymaps3-types";
 import styles from "./ContactMap.module.css";
 
 type Props = {
-    center: LngLat;
+    center: number[];
     defaultPlacemark: {center: number[]};
     placemarks: {center: number[]}[];
     zoom: number;
