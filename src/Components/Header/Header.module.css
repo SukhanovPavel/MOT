@@ -1,0 +1,25 @@
+.header {
+    height: 3rem;
+    padding: 1rem;
+    width: 100%;
+    background: white;
+    text-shadow: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+.logo {
+    color: var(--blue-color);
+    font-weight: bold;
+    font-size: 2rem;
+    float: left;
+    width: 30%;
+}
+.headerLinks {
+    text-decoration: underline 2px cornflowerblue;
+    text-underline-position: under;
+}
+.headerLinks:hover {
+    text-decoration: underline 3px darkorange;
+}

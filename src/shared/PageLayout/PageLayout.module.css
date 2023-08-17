@@ -1,0 +1,12 @@
+._ {
+    --red-color: rgb(239, 68, 68);
+    --blue-color: rgb(96, 165, 250);
+    --yellow-color: rgb(250, 204, 21);
+}
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background: white;
+}
