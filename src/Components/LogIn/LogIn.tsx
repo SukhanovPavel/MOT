@@ -30,8 +30,8 @@ export const LogIn = () => (
         </div>
 
         <div className={styles.contact}>
-            <a href="tel:88005555555" className={styles.phone}>
-                8(800)555-55-55
+            <a href="tel:84997043491" className={styles.phone}>
+                8 (499) 704 34 91
             </a>
             <div className={styles.sloganTwo}>
                 Интернет

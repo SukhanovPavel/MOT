@@ -2,10 +2,16 @@
 
 import React from 'react';
 import {Clusterer, Map, Placemark, YMaps} from "@pbe/react-yandex-maps";
+import type { LngLat } from "@yandex/ymaps3-types";
 
 import styles from "./ContactMap.module.css";
 
-export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}) => {
+type Props = {
+    center?: number[];
+    placemarks?: {center: number[]}[];
+    zoom?: number;
+}
+export const ContactMap = ({center, placemarks, zoom}: Props) => {
     return (
         <YMaps>
             <Map
@@ -16,7 +22,7 @@ export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}) => {
                 }}
 
             >
-                {defaultPlacemark && <Placemark defaultGeometry={[55.575271, 39.529011]}/>}
+                <Placemark defaultGeometry={[55.575271, 39.529011]}/>
                 {placemarks ? <Clusterer
                     options={{
                         preset: "islands#invertedVioletClusterIcons",
