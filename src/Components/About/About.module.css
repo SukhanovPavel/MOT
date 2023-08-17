@@ -18,3 +18,10 @@
 .about p {
     margin-top: 0.5rem;
 }
+
+
+@media screen and (max-width: 980px){
+    ._ {
+        padding-left: 1rem;
+    }
+}
