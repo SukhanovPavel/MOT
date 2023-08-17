@@ -8,11 +8,10 @@ import styles from "./ContactMap.module.css";
 
 type Props = {
     center: number[];
-    defaultPlacemark?: true | false;
     placemarks: {center: number[]}[];
     zoom: number;
 }
-export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}: Props) => {
+export const ContactMap = ({center, placemarks, zoom}: Props) => {
     return (
         <YMaps>
             <Map
@@ -23,7 +22,7 @@ export const ContactMap = ({center, defaultPlacemark, placemarks, zoom}: Props) 
                 }}
 
             >
-                {defaultPlacemark && <Placemark defaultGeometry={[55.575271, 39.529011]}/>}
+                <Placemark defaultGeometry={[55.575271, 39.529011]}/>
                 {placemarks ? <Clusterer
                     options={{
                         preset: "islands#invertedVioletClusterIcons",

@@ -24,7 +24,7 @@ export default function Home() {
 
           <Contacts />
 
-          <ContactMap defaultPlacemark/>
+          <ContactMap/>
 
       </PageLayout>
   )

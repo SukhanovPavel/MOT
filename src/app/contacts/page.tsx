@@ -9,7 +9,9 @@ const Page = () => {
     return (
         <PageLayout>
             <Contacts />
-            <ContactMap defaultPlacemark={true}/>
+            <ContactMap
+                // defaultPlacemark
+            />
         </PageLayout>
     );
 };
