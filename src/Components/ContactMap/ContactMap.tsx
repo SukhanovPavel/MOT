@@ -7,9 +7,9 @@ import type { LngLat } from "@yandex/ymaps3-types";
 import styles from "./ContactMap.module.css";
 
 type Props = {
-    center: number[];
-    placemarks: {center: number[]}[];
-    zoom: number;
+    center?: number[];
+    placemarks?: {center: number[]}[];
+    zoom?: number;
 }
 export const ContactMap = ({center, placemarks, zoom}: Props) => {
     return (
