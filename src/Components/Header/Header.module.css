@@ -2,7 +2,7 @@
     height: 3rem;
     padding: 1rem;
     width: 100%;
-    background: white;
+    background: rgb(var(--background-start-rgb));
     text-shadow: lightslategray;
     display: flex;
     align-items: center;

@@ -10,6 +10,7 @@
     background: white;
     opacity: 0.7;
     padding: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .news p {
     margin-top: 0.5rem;
@@ -21,5 +22,12 @@
 @media screen and (max-width: 980px){
     ._ {
         padding-right: 1rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .news {
+        background: rgb(150, 150, 150, 0.3);
+        opacity: 1;
     }
 }
