@@ -21,11 +21,10 @@ export const CheckAddress = () => {
               <input
                   value={text}
                   onChange={({target: {value}}) => {
-                      setSearchPanel(true);
+                      addresses.length !== 0 && setSearchPanel(true);
                       setText(value);
                   }}
                   className={styles.input}
-                  // onKeyUp={(event) => console.log(event.key)}
               />
 
                 {searchPanel && text && addresses.length !== 0 && <div className={styles.searchPanel}>
@@ -38,7 +37,7 @@ export const CheckAddress = () => {
                                     }}
                                     key={item.id}
                                 >
-                                    {item.address ? item.address : setSearchPanel(false)}
+                                    {item.address}
                                 </p>
                                 : null)
                     }
