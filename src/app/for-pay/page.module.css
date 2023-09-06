@@ -21,7 +21,7 @@
     padding: 2rem;
     text-align: justify;
     animation-duration: 0.5s;
-    animation-name: slidein;
+    animation-name: opacity;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -36,15 +36,12 @@
     color: rgb(96, 165, 250);
 }
 
-@keyframes slidein {
+@keyframes opacity {
     from {
-        margin-right: 30rem;
-        margin-left: 30rem;
-        width: 60%;
+        opacity: 0;
     }
 
     to {
-        margin-right: 0;
-        width: 100%;
+        opacity: 1;
     }
 }

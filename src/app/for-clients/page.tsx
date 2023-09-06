@@ -1,10 +1,11 @@
 import {PageLayout} from "@/shared/PageLayout/PageLayout";
 import styles from "./page.module.css";
+import {CheckAddress} from "@/Components/CheckAddress/CheckAddress";
 
 export default function ForClients()  {
     return (
         <PageLayout>
-            <div className={styles.title}>Страница клиента &gt;</div>
+            <CheckAddress/>
             <div className={styles.login}>
 
                 <div className={styles.loginTop}>

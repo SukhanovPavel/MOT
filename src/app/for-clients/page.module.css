@@ -3,25 +3,8 @@
     flex-direction: column;
     background: rgb(150, 150, 150, 0.4);
     border-radius: 1rem;
-    animation-duration: 0.5s;
-    animation-name: slidein;
 }
-/*p {*/
-/*    animation-duration: 3s;*/
-/*    animation-name: slidein;*/
-/*}*/
 
-@keyframes slidein {
-    from {
-        margin-right: 1%;
-        width: 60%;
-    }
-
-    to {
-        margin-right: 0%;
-        width: 100%;
-    }
-}
 @keyframes opacity {
     from {
         opacity: 0;

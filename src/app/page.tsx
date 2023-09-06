@@ -8,21 +8,21 @@ import {ContactMap} from "@/Components/ContactMap/ContactMap";
 import {Contacts} from "@/Components/Contacts/Contacts";
 
 export default function Home() {
-  return (
-      <PageLayout>
+    return (
+        <PageLayout>
 
-          <CheckAddress />
+            <CheckAddress/>
 
-          <LogIn />
+            <LogIn/>
 
-          <News />
+            <News/>
 
-          <About />
+            <About/>
 
-          <Contacts />
+            <Contacts/>
 
-          <ContactMap/>
+            <ContactMap/>
 
-      </PageLayout>
-  )
+        </PageLayout>
+    )
 }

@@ -3,11 +3,15 @@
 import styles from "./CheckAddress.module.css";
 import {address as defaultAddress} from "@/address/address";
 import {useState} from "react";
+import {AddressModal} from "@/Components/AddressModal/AddressModal";
+
 export const CheckAddress = () => {
 
-    const [address, setAddress] = useState(defaultAddress);
+    const [modal, setModal] = useState(false);
     const [searchPanel, setSearchPanel] = useState(false);
     const [text, setText] = useState('');
+
+    const addresses = defaultAddress.filter(item => item.address.toLowerCase().includes(text.toLowerCase()));
 
     return (
         <form className={styles.leftCol}>
@@ -21,21 +25,41 @@ export const CheckAddress = () => {
                       setText(value);
                   }}
                   className={styles.input}
+                  // onKeyUp={(event) => console.log(event.key)}
               />
 
-              {searchPanel && text && <div className={styles.searchPanel}>
-                {address.filter(item =>
-                    item.address.toLowerCase().includes(text.toLowerCase())).map((item, index) =>
-                    index < 50 ? <p key={item.id}>{item.address}</p> : null)}
-              </div>}
+                {searchPanel && text && addresses.length !== 0 && <div className={styles.searchPanel}>
+                    {addresses.map((item, index) =>
+                            index < 50 ?
+                                <p
+                                    onClick={() => {
+                                        setText(item.address)
+                                        setSearchPanel(false)
+                                    }}
+                                    key={item.id}
+                                >
+                                    {item.address ? item.address : setSearchPanel(false)}
+                                </p>
+                                : null)
+                    }
+                </div>}
 
             </span>
             <button
                 className={styles.searchButton}
-                onClick={(event) => {event.preventDefault()}}
+                onClick={(event) => {
+                    event.preventDefault();
+                    setModal(true);
+                }}
             >
                 Проверить
             </button>
+
+            {text && modal && <AddressModal
+                openModal={() => setModal(false)}
+                text={addresses.length !== 0 ?
+                    "Такой адрес можно подключить" : "Такой адрес еще не подключен"}
+            />}
         </form>
     )
 }

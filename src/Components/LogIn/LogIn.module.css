@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     animation-duration: 0.5s;
-    animation-name: slidein;
+    animation-name: opacity;
 }
 .arrow {
     height: 6rem;
@@ -96,15 +96,13 @@
     text-shadow: #000 1px 0 5px;
 }
 
-@keyframes slidein {
+@keyframes opacity {
     from {
-        margin-right: -30rem;
-        /*width: 60%;*/
+        opacity: 0;
     }
 
     to {
-        margin-right: 0;
-        /*width: 100%;*/
+        opacity: 1;
     }
 }
 

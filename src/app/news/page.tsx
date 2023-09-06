@@ -1,11 +1,16 @@
 import React from 'react';
 import {Header} from "@/Components/Header/Header";
 import styles from "@/app/for-pay/page.module.css";
+import {PageLayout} from "@/shared/PageLayout/PageLayout";
+import {LogIn} from "@/Components/LogIn/LogIn";
+import {News} from "@/Components/News/News";
+import {CheckAddress} from "@/Components/CheckAddress/CheckAddress";
 
 const Page = () => {
     return (
         <div>
-            <Header />
+            {/*<Header />*/}
+            <PageLayout><CheckAddress/>
             <div className={styles._}>
                 <p className={styles.title}>
                     Новости
@@ -17,6 +22,7 @@ const Page = () => {
                         vero voluptates voluptatibus.</p>
                 </div>
             </div>
+            </PageLayout>
         </div>
     );
 };
