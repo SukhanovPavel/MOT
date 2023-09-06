@@ -4,6 +4,7 @@ import styles from "./CheckAddress.module.css";
 import {address as defaultAddress} from "@/address/address";
 import {useState} from "react";
 import {AddressModal} from "@/Components/AddressModal/AddressModal";
+import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 
 export const CheckAddress = () => {
 
@@ -14,6 +15,7 @@ export const CheckAddress = () => {
     const addresses = defaultAddress.filter(item => item.address.toLowerCase().includes(text.toLowerCase()));
 
     return (
+        <>
         <form className={styles.leftCol}>
             <span>Проверить адрес:</span>
             <span className={styles.inputWrap}>
@@ -48,7 +50,7 @@ export const CheckAddress = () => {
                 className={styles.searchButton}
                 onClick={(event) => {
                     event.preventDefault();
-                    setModal(true);
+                    text && setModal(true);
                 }}
             >
                 Проверить
@@ -60,5 +62,7 @@ export const CheckAddress = () => {
                     "Такой адрес можно подключить" : "Такой адрес еще не подключен"}
             />}
         </form>
+        <ConnectButton />
+        </>
     )
 }

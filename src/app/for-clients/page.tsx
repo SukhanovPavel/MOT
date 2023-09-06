@@ -1,14 +1,15 @@
 import {PageLayout} from "@/shared/PageLayout/PageLayout";
 import styles from "./page.module.css";
+import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 import {CheckAddress} from "@/Components/CheckAddress/CheckAddress";
 
 export default function ForClients()  {
     return (
         <PageLayout>
             <CheckAddress/>
-            <div className={styles.login}>
+            <div className={styles._}>
 
-                <div className={styles.loginTop}>
+                <div className={styles.top}>
                     <div className={styles.topHeaders+" "+styles.left}>
                         Частным клиентам:
                     </div>

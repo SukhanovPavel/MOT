@@ -1,4 +1,4 @@
-.login {
+._ {
     display: flex;
     flex-direction: column;
     background: rgb(150, 150, 150, 0.4);
@@ -14,16 +14,7 @@
         opacity: 1;
     }
 }
-.title {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--red-color);
-}
-.loginTop {
+.top {
     width: 100%;
     height: 4.5rem;
     display: flex;
@@ -65,7 +56,7 @@
     background: var(--red-color);
 }
 .lk {
-    width: 100%;
+    /*width: 100%;*/
     display: flex;
     justify-content: flex-start;
     margin: 2rem;
@@ -76,18 +67,21 @@
     font-weight: bold;
     animation-duration: 0.5s;
     animation-name: opacity;
-    /*color: var(--red-color);*/
 }
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-/*.lk a {*/
-/*    cursor: pointer;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    gap: 2rem;*/
-/*    font-size: 2rem;*/
-/*    font-weight: bold;*/
-/*    color: var(--red-color);*/
-/*}*/
+
+
+@media screen and (max-width: 980px) {
+    ._ {
+        margin: 0 0.5rem;
+        width: auto;
+        height: auto;
+    }
+    .topHeaders {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}

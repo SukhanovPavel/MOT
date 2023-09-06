@@ -1,22 +1,26 @@
 import React from "react";
 import {Header} from "@/Components/Header/Header";
-import Head from "next/head";
+import cx from "classnames";
 
 import styles from "./PageLayout.module.css";
 
+type Props = {
+    children: React.PropsWithChildren<{}>;
+    noGrid: boolean;
+}
 
-export const PageLayout = ({children}: React.PropsWithChildren<{}>) => (
-    <div className={styles._}>
-        <Head>
-            <title>MocОблТелеком. Интернет в ваш дом</title>
-            <meta name="description" content="Видеонаблюдение, системы безопасности, камеры, оборудование. Установка систем видеонаблюдения в Шатуре" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/motFavicon.png" type="image/png"/>
-        </Head>
-        <Header />
+export const PageLayout = ({children, noGrid}: Props) => {
 
-        <main className={styles.main}>
-            {children}
-        </main>
-    </div>
-)
+    const styleGrid = cx( {[styles.main]: true}, {[styles.dFlex]: noGrid})
+
+    return (
+        <div className={styles._}>
+
+            <Header/>
+
+            <main className={styleGrid}>
+                {children}
+            </main>
+        </div>
+    )
+}

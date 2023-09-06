@@ -3,6 +3,8 @@ import {ContactMap} from "@/Components/ContactMap/ContactMap";
 import {PageLayout} from "@/shared/PageLayout/PageLayout";
 
 import styles from "./page.module.css";
+import {CheckAddress} from "@/Components/CheckAddress/CheckAddress";
+import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 
 const zones = [
     { center: [55.579016, 39.548045]},             //Шатура
@@ -43,6 +45,7 @@ const Page = () => {
                 zoom={10}
                 center={[55.600882, 39.788486]}
             />
+            <ConnectButton />
         </PageLayout>
     );
 };

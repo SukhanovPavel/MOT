@@ -6,6 +6,7 @@ import {About} from "@/Components/About/About";
 import {PageLayout} from "@/shared/PageLayout/PageLayout";
 import {ContactMap} from "@/Components/ContactMap/ContactMap";
 import {Contacts} from "@/Components/Contacts/Contacts";
+import Head from "next/head";
 
 export default function Home() {
     return (

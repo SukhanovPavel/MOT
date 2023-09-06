@@ -2,11 +2,14 @@ import React from 'react';
 import {Header} from "@/Components/Header/Header";
 
 import styles from "./page.module.css";
+import {PageLayout} from "@/shared/PageLayout/PageLayout";
+import {CheckAddress} from "@/Components/CheckAddress/CheckAddress";
+import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 
 const Page = () => {
     return (
-        <div>
-            <Header />
+        <PageLayout noGrid>
+            <ConnectButton />
             <div className={styles._}>
                 <p className={styles.title}>
                     Как оплатить
@@ -84,7 +87,7 @@ const Page = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </PageLayout>
     );
 };
 
