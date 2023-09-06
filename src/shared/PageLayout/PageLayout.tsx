@@ -15,7 +15,7 @@ interface PageLayoutProps extends React.PropsWithChildren<{}> {
 }
 
 
-export const PageLayout: React.FC<PageLayoutProps> = ({children, noGrid}: Props) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({children, noGrid}) => {
 
     const styleGrid = cx( {[styles.main]: true}, {[styles.dFlex]: noGrid})
 
