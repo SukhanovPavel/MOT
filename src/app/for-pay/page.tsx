@@ -8,7 +8,7 @@ import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 
 const Page = () => {
     return (
-        <PageLayout noGrid>
+        <PageLayout noGrid={true}>
             <ConnectButton />
             <div className={styles._}>
                 <p className={styles.title}>
