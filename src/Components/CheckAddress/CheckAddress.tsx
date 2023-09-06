@@ -5,10 +5,12 @@ import {address as defaultAddress} from "@/address/address";
 import {useState} from "react";
 import {AddressModal} from "@/Components/AddressModal/AddressModal";
 import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
+import {Modal} from "@/Components/Modal/Modal";
 
 export const CheckAddress = () => {
 
     const [modal, setModal] = useState(false);
+    const [modalSend, setModalSend] = useState(false);
     const [searchPanel, setSearchPanel] = useState(false);
     const [text, setText] = useState('');
 
@@ -58,11 +60,21 @@ export const CheckAddress = () => {
 
             {text && modal && <AddressModal
                 openModal={() => setModal(false)}
+                sendData={() => {
+                    setModal(false);
+                    setModalSend(true);
+                }}
                 text={addresses.length !== 0 ?
                     "Такой адрес можно подключить" : "Такой адрес еще не подключен"}
             />}
         </form>
-        <ConnectButton />
+            {modalSend &&
+                <Modal
+                    openModal={() => setModalSend(false)}
+                    address={text}
+                />
+            }
+        <ConnectButton sendData={() => setModalSend(true)}/>
         </>
     )
 }

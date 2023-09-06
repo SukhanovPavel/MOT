@@ -4,9 +4,10 @@ import styles from "./AddressModal.module.css";
 type Props = {
     text: string;
     openModal: () => void;
+    sendData: () => void;
 }
 
-export const AddressModal = ({text, openModal}: Props) => {
+export const AddressModal = ({text, openModal, sendData}: Props) => {
     return (
         <div
             className={styles.modal}
@@ -16,7 +17,15 @@ export const AddressModal = ({text, openModal}: Props) => {
         >
             <div className={styles.modalWindow}>
                 <div className={styles.text}>{text}</div>
-                <button className={styles.button}>Подать заявку на подключение</button>
+                <button
+                    onClick={(event) => {
+                        event.preventDefault();
+                        sendData();
+                    }}
+                    className={styles.button}
+                >
+                    Подать заявку на подключение
+                </button>
             </div>
         </div>
     );
