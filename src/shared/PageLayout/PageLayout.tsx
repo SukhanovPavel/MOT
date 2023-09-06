@@ -9,7 +9,9 @@ type Props = {
     noGrid: boolean;
 }
 
-export const PageLayout = ({children, noGrid}: Props) => {
+interface PageLayoutProps extends React.PropsWithChildren<{}> {}
+
+export const PageLayout: React.FC<PageLayoutProps> = ({children, noGrid}: Props) => {
 
     const styleGrid = cx( {[styles.main]: true}, {[styles.dFlex]: noGrid})
 
