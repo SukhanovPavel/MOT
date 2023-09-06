@@ -8,11 +8,11 @@ import {ConnectButton} from "@/Components/ConnectButton/ConnectButton";
 const Page = () => {
     return (
         <PageLayout>
-            <>
+            <div>
                 <Contacts />
                 <ContactMap />
                 <ConnectButton />
-            </>
+            </div>
         </PageLayout>
     );
 };
