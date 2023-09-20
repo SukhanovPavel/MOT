@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import styles from "./ConnectButton.module.css";
 import {Modal} from "@/Components/Modal/Modal";
+import {undefined} from "zod";
 
 type Props = {
     sendData?: () => void;
@@ -20,7 +21,7 @@ export const ConnectButton = ({sendData}: Props) => {
             >
                 Подключиться к сети
             </button>
-            {modalSend && <Modal openModal={() => setModalSend(false)} />}
+            {modalSend && <Modal clearSearchValue={() => {}} openModal={() => setModalSend(false)} />}
         </>
     );
 };
