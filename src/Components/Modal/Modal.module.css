@@ -53,6 +53,9 @@
     border: none;
     outline: none;
 }
+.setText {
+    border: solid 1px red;
+}
 .button {
     background: var(--red-color);
     padding: 0.25rem 1rem;

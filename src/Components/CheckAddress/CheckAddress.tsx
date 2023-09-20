@@ -70,6 +70,7 @@ export const CheckAddress = () => {
         </form>
             {modalSend &&
                 <Modal
+                    clearSearchValue={() => setText("")}
                     openModal={() => setModalSend(false)}
                     address={text}
                 />
