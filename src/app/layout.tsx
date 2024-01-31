@@ -1,5 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import {Header} from "@/Components/Header/Header";
+import React from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +23,10 @@ export default function RootLayout({
     </head>
       <body
           className={inter.className}
-      >{children}</body>
+      >
+        <Header/>
+        {children}
+      </body>
     </html>
   )
 }

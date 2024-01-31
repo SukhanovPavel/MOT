@@ -1,7 +1,7 @@
 ._ {
     display: flex;
     flex-direction: column;
-    background: rgb(150, 150, 150, 0.4);
+    background: rgb(150, 150, 150, 0.1);
     border-radius: 1rem;
 }
 

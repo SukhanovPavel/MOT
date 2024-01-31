@@ -11,11 +11,11 @@ export const LogIn = () => (
     <div className={styles._}>
         <div className={styles.login}>
             <div className={styles.loginTop}>
-                <div className={styles.topHeaders+" "+styles.left}>
-                    <Link href="/for-clients">Частным клиентам:</Link>
+                <div>
+                    <Link href="/for-clients">Частным клиентам</Link>
                 </div>
-                <div className={styles.topHeaders+" "+styles.right}>
-                    <Link href="/for-clients">Корпоративным клиентам:</Link>
+                <div>
+                    <Link href="/for-clients">Корпоративным клиентам</Link>
                 </div>
             </div>
             <div className={styles.slogan}>
