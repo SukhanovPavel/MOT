@@ -21,9 +21,6 @@ export const PageLayout: React.FC<PageLayoutProps> = ({children, noGrid}) => {
 
     return (
         <div className={styles._}>
-
-            <Header/>
-
             <main className={styleGrid}>
                 {children}
             </main>

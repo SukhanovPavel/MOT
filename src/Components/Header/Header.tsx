@@ -12,8 +12,9 @@ export const Header = () => {
     return (
         <div className={styles._}>
             <header className={styles.header}>
-                <Link className={styles.logo} href="/">МосОблТелеком</Link>
-                <Link className={styles.headerLinks} href="/">О компании</Link>
+                <Link className={styles.logo} href="/"><img src="/111111111.jpg"/>МосОблТелеком</Link>
+                <Link className={styles.headerLinks} href="/">Главная</Link>
+                <Link className={styles.headerLinks} href="/about">О компании</Link>
                 <Link className={styles.headerLinks} href="/for-clients">Услуги и цены</Link>
                 <Link className={styles.headerLinks} href="/for-pay">Как оплатить</Link>
                 {/*<Link className={styles.headerLinks} href="/">Клиенту сети</Link>*/}
@@ -29,8 +30,9 @@ export const Header = () => {
             </button>
 
             {isOpen &&
-                <div className={styles.mobileMenu}>
+                <div className={styles.mobileMenu} onClick={() => setIsOpen(false)}>
                     <Link className={styles.headerLinks} href="/">Главная</Link>
+                    <Link className={styles.headerLinks} href="/about">О компании</Link>
                     <Link className={styles.headerLinks} href="/for-clients">Услуги и цены</Link>
                     <Link className={styles.headerLinks} href="/for-pay">Как оплатить</Link>
                     {/*<Link className={styles.headerLinks} href="/">Клиенту сети</Link>*/}
