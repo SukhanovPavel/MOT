@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <div className={styles._}>
             <header className={styles.header}>
-                <Link className={styles.logo} href="/"><img src="/111111111.jpg"/>МосОблТелеком</Link>
+                <Link className={styles.logo} href="/"><img id="logo" src="/111111111.jpg"/>МосОблТелеком</Link>
                 <Link className={styles.headerLinks} href="/">Главная</Link>
                 <Link className={styles.headerLinks} href="/about">О компании</Link>
                 <Link className={styles.headerLinks} href="/for-clients">Услуги и цены</Link>
